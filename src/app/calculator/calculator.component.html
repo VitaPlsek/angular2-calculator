@@ -1,0 +1,36 @@
+<div class="calculator">
+  <div class="display">
+    <input type="number" id="display" readonly="" [value]="getDisplayValue()">
+  </div>
+
+  <div id="buttons">
+    <div>
+      <button type="button" value="1" (click)="processOperand($event.target.value)">1</button>
+      <button type="button" value="4" (click)="processOperand($event.target.value)">4</button>
+      <button type="button" value="7" (click)="processOperand($event.target.value)">7</button>
+      <button type="button" name="clear" class="operation" (click)="processClear($event.target.name)">C</button>
+    </div>
+
+    <div>
+      <button type="button" value="2" (click)="processOperand($event.target.value)">2</button>
+      <button type="button" value="5" (click)="processOperand($event.target.value)">5</button>
+      <button type="button" value="8" (click)="processOperand($event.target.value)">8</button>
+      <button type="button" value="0" (click)="processOperand($event.target.value)">0</button>
+    </div>
+
+    <div>
+      <button type="button" value="3" (click)="processOperand($event.target.value)">3</button>
+      <button type="button" value="6" (click)="processOperand($event.target.value)">6</button>
+      <button type="button" value="9" (click)="processOperand($event.target.value)">9</button>
+      <button type="button" name="equals" class="operation" (click)="processEquals()">=</button>
+    </div>
+
+    <div>
+      <button type="button" name="add" class="operation" (click)="processOperation($event.target.name)">+</button>
+      <button type="button" name="sub" class="operation" (click)="processOperation($event.target.name)">-</button>
+      <button type="button" name="mul" class="operation" (click)="processOperation($event.target.name)">x</button>
+      <button type="button" name="div" class="operation" (click)="processOperation($event.target.name)">/</button>
+    </div>
+
+  </div>
+</div>

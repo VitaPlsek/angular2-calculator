@@ -1,0 +1,51 @@
+@import "../../../node_modules/bootstrap/less/bootstrap.less";
+
+
+.calculator {
+
+  .well;
+  .make-row();
+  .make-md-column(6);
+  .make-md-column-offset(3);
+
+  margin-top: 50px;
+
+  .display {
+    .make-xs-column(12);
+
+    input {
+      .form-control;
+
+      &[readonly] {
+        background-color: white;
+      }
+    }
+  }
+
+  #buttons {
+    div {
+      .make-xs-column(3);
+    }
+
+    button {
+      .btn;
+      .btn-lg;
+      .btn-default;
+
+      .form-control;
+
+      margin-top: 30px;
+
+      &.operation {
+        .btn-info;
+
+        &[name='equals'] {
+          .btn-success;
+        }
+        &[name='clear'] {
+          .btn-danger;
+        }
+      }
+    }
+  }
+}
